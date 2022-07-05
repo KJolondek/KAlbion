@@ -1,0 +1,54 @@
+
+<ul class="breadcrumb">
+  <li><a href="#">Apps</a></li>
+  <li><b>Buscar Item</b></li>
+</ul>
+
+<div class="container">
+    <div class="row center">
+      <div class="col-md-12 b-margin-10">
+        <label for="name">Buscar Item: </label>
+          <input type="input" placeholder="Name" name="name" id='name' [(ngModel)]="searchInput" (keypress)="eventHandler($event)"/>
+      </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row f-row center">
+  <div class="col-md-12">
+    <button class="btn btn-primary form-control" type="button" [disabled]="isBusy" (click)="search()">Pesquisar</button>
+  </div>
+</div>
+
+<br>
+
+<div class="row center" *ngIf="searchResult.length > 0">
+  <div class="col-md-3" *ngFor="let resource of itemGroupedByCategory" style="margin-bottom: 20px;">
+    <table class="center table-dark table-sm">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Item</th>
+          <th style="text-align: center;">Cidade</th>
+          <th style="text-align: center;">Min. Preço Venda</th>
+          <th style="text-align: center;">Atualizado há</th>
+          <th style="text-align: center;">Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r2 of searchResult">
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.item_description}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.city}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.sell_price_min}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id"><span *ngIf="r2.sell_price_min_date != '0001-01-01T00:00:00'">{{r2.sell_price_min_date | dateAgo}}</span></td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id" [ngClass]="{'bg-red': r2.is_max, 'bg-green': r2.is_min }">{{r2.max_profit}}</td>
+        </tr>
+        <tr style="background-color: lightslategrey;">
+          <td colspan="5"style="text-align: center;"><h5>Max Profit: {{resource.profit}}</h5></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>

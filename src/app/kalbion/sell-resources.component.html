@@ -1,0 +1,276 @@
+
+<ul class="breadcrumb">
+  <li><a href="#">Apps</a></li>
+  <li><b>Vender Recursos</b></li>
+</ul>
+
+<div class="row center">
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(ores)">Minérios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of ores">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(woods)">Madeiras</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of woods">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(rocks)">Pedras</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of rocks">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(fibers)">Fibras</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of fibers">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(hides)">Pelegos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of hides">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(clothes)">Tecidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of clothes">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(leathers)">Couros</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of leathers">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(metalBars)">Barras de Metal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of metalBars">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(plankes)">Tábuas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of plankes">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-3 b-margin-10">
+    <table class="center">
+      <thead>
+        <tr>
+          <th colspan="7" style="text-align: center; font-size: large; cursor: pointer;" (click)="setResourcesState(stoneBlocks)">Blocos de Pedra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let resource of stoneBlocks">
+            <button class="btn" [ngClass]="{'btn-success': resource.send, 'btn-danger': !resource.send }" type="button" (click)="resource.send = !resource.send">T{{resource.tier}}</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+
+<div class="row f-row center">
+  <div class="col-md-12">
+    <button class="btn btn-primary form-control" type="button" [disabled]="isBusy" (click)="search()">Pesquisar</button>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="card">
+    <div class="card-header">
+      <b>Minérios</b>
+    </div>
+  
+    <div class="card-body">
+      <div class="row f-row">
+        <div class="col-md-1" style="text-align: center;">
+          <button class="btn" [ngClass]="{'btn-success': t2, 'btn-danger': !t2 }" type="button" (click)="t2 = !t2">T2</button>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-2">Nota da prova 1:</div>
+        <div class="col-md-2"><input type="number" [(ngModel)]="nota_p1" step="0.5" min="0" max="10"></div>
+  
+        <div class="col-md-2"><b>Nota da prova 2:</b></div>
+        <div class="col-md-2">
+          <h2><span *ngIf="total_p1 >= 0 && total_p2 >= 0 && nota_p1 >= 0">{{(total_p2 * nota_p1) / total_p1 | number:'1.2-2'}}</span>&nbsp;</h2>
+        </div>
+      </div>
+  
+      <div class="row f-row">
+        <div class="col-md-12">
+          <button class="btn btn-primary form-control" type="button" (click)="search()">Pesquisar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <br>
+
+<div class="container" *ngIf="searchResult.length > 0">
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th style="text-align: center;">Item</th>
+            <th style="text-align: center;">Cidade</th>
+            <th style="text-align: center;">Min. Preço Venda</th>
+            <th style="text-align: center;">Atualizado há</th>
+            <th style="text-align: center;">Profit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of searchResult">
+            <th style="text-align: center;">{{item.item_id}}</th>
+            <td style="text-align: center;">{{item.city}}</td>
+            <td style="text-align: center;">{{item.sell_price_min}}</td>
+            <td style="text-align: center;"><span  *ngIf="item.sell_price_min_date != '0001-01-01T00:00:00'">{{item.sell_price_min_date | dateAgo}}</span></td>
+            <td style="text-align: center;" [ngClass]="{'bg-red': item.is_max, 'bg-green': item.is_min }">{{item.max_profit}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+<br>
+
+<div class="row center" *ngIf="searchResult.length > 0">
+  <div class="col-md-3" *ngFor="let resource of activeResources" style="margin-bottom: 20px;">
+    <table class="center table-dark table-sm">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Item</th>
+          <th style="text-align: center;">Cidade</th>
+          <th style="text-align: center;">Min. Preço Venda</th>
+          <th style="text-align: center;">Atualizado há</th>
+          <th style="text-align: center;">Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r2 of searchResult">
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.item_id}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.city}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id">{{r2.sell_price_min}}</td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id"><span *ngIf="r2.sell_price_min_date != '0001-01-01T00:00:00'">{{r2.sell_price_min_date | dateAgo}}</span></td>
+          <td style="text-align: center;" *ngIf="resource.stringItem == r2.item_id" [ngClass]="{'bg-red': r2.is_max, 'bg-green': r2.is_min }">{{r2.max_profit}}</td>
+        </tr>
+        <tr style="background-color: lightslategrey;">
+          <td colspan="5"style="text-align: center;"><h5>Max Profit: {{resource.profit}}</h5></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>

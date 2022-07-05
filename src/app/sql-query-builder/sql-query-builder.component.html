@@ -1,0 +1,47 @@
+
+<ul class="breadcrumb">
+  <li><a href="#">Apps</a></li>
+  <li><b>SQL Query Builder</b></li>
+</ul>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <b>SQL Query Builder (INSERT)</b>
+    </div>
+  
+    <div class="card-body">
+      <div class="row f-row">
+        <div class="col-md-2">
+          <span>TableName</span>
+        </div>
+        <div class="col-md-5">
+          <input class="form-control" type="text" name="table" id="table" [(ngModel)]="tableName" placeholder="Enter schema.TableName to INSERT">
+        </div>
+        <div class="col-md-5">
+          <input type="file" (change)="addfile($event)" placeholder="Upload file" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">        
+        </div>
+      </div>
+      <br>
+
+      
+      <br>
+      
+      <div class="row f-row">
+        <textarea [(ngModel)]="queryString" style="width:100%; height:200px"></textarea>
+      </div>
+
+      <br>
+
+      <div class="row f-row">
+        <div class="col-md-12">
+          <button class="btn btn-primary form-control" [disabled]="!fileList" type="button" (click)="reloadQuery()">Recarregar Query</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<br>
+<br>
+ 
